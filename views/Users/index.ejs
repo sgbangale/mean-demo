@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+     <div class="container">
+           <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+     <div class="table-responsive">          
+    <table class="table-striped table-bordered">
+      <thead>
+        <tr>
+          <td>
+            Name
+          </td>
+          <td>
+            Email
+          </td>
+          <td>
+            Role
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+     <% for(var i=0; i<userData.length; i++) { %>
+     <tr>
+       <td>
+         <%=userData[i].FirstName %>  <%=userData[i].LastName %>
+       </td>
+       <td>
+         <%=userData[i].Email %> 
+       </td>
+       <td>
+         <%=userData[i].Role %> 
+       </td>
+     </tr>
+      <% } %>
+      </tbody>
+    </table>
+</div>     
+     
+    </div>
+  </body>
+</html>
